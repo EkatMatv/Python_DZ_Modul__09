@@ -2,10 +2,10 @@
 их строки. Если нет, то вывести несовпадающую строку
 из каждого файла.'''
 
-with open('text1.txt', 'r', encoding='utf-8') as file:
-    lines1 = file.readlines()
-with open('text2.txt', 'r', encoding='utf-8') as file:
-    lines2 = file.readlines()
+file = open('text1.txt', 'r', encoding='utf-8')
+lines1 = file.readlines()
+file = open('text2.txt', 'r', encoding='utf-8')
+lines2 = file.readlines()
 max_lines = max(len(lines1), len(lines2))
 if lines1 == lines2:
     print('Все строки в файлах совпадают')
